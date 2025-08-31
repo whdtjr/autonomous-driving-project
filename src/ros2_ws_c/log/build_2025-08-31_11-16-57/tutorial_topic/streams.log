@@ -1,0 +1,10 @@
+[0.019s] Invoking command in '/home/js/ros2_ws_c/build/tutorial_topic': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/js/ros2_ws/install/my_package:/opt/ros/humble /usr/local/bin/cmake --build /home/js/ros2_ws_c/build/tutorial_topic -- -j16 -l16
+[0.043s] [31mCMake Error at CMakeLists.txt:19:
+[0.043s]   Parse error.  Expected "(", got identifier with text
+[0.043s]   "ament_target_dependencies".
+[0.043s] 
+[0.043s] [0m
+[0.043s] -- Configuring incomplete, errors occurred!
+[0.043s] See also "/home/js/ros2_ws_c/build/tutorial_topic/CMakeFiles/CMakeOutput.log".
+[0.045s] gmake: *** [Makefile:308: cmake_check_build_system] Error 1
+[0.048s] Invoked command in '/home/js/ros2_ws_c/build/tutorial_topic' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/js/ros2_ws/install/my_package:/opt/ros/humble /usr/local/bin/cmake --build /home/js/ros2_ws_c/build/tutorial_topic -- -j16 -l16

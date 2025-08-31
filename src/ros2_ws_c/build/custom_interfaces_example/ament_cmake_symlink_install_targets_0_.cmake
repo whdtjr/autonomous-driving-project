@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/js/ros2_ws_c/build/custom_interfaces_example/robot_status_publisher" "TARGETS" "robot_status_publisher" "DESTINATION" "lib/custom_interfaces_example")

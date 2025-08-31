@@ -1,0 +1,1 @@
+/home/js/ros2_ws_c/build/moving_service/ament_cmake_environment_hooks/local_setup.sh

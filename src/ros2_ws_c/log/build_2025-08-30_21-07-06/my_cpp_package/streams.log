@@ -1,0 +1,31 @@
+[0.020s] Invoking command in '/home/js/ros2_ws_c/build/my_cpp_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/js/ros2_ws/install/my_package:/opt/ros/humble /usr/local/bin/cmake --build /home/js/ros2_ws_c/build/my_cpp_package -- -j16 -l16
+[0.131s] [35m[1mConsolidate compiler generated dependencies of target fast_timer_node[0m
+[0.178s] [ 25%] [32mBuilding CXX object CMakeFiles/fast_timer_node.dir/src/fast_timer_node.cpp.o[0m
+[0.182s] [ 75%] Built target timer_node
+[1.552s] [100%] [32m[1mLinking CXX executable fast_timer_node[0m
+[1.691s] [100%] Built target fast_timer_node
+[1.715s] Invoked command in '/home/js/ros2_ws_c/build/my_cpp_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/js/ros2_ws/install/my_package:/opt/ros/humble /usr/local/bin/cmake --build /home/js/ros2_ws_c/build/my_cpp_package -- -j16 -l16
+[1.747s] Invoking command in '/home/js/ros2_ws_c/build/my_cpp_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/js/ros2_ws/install/my_package:/opt/ros/humble /usr/local/bin/cmake --install /home/js/ros2_ws_c/build/my_cpp_package
+[1.761s] -- Install configuration: ""
+[1.761s] -- Installing: /home/js/ros2_ws_c/install/my_cpp_package/lib/my_cpp_package/timer_node
+[1.762s] -- Set runtime path of "/home/js/ros2_ws_c/install/my_cpp_package/lib/my_cpp_package/timer_node" to ""
+[1.762s] -- Installing: /home/js/ros2_ws_c/install/my_cpp_package/lib/my_cpp_package/fast_timer_node
+[1.763s] -- Set runtime path of "/home/js/ros2_ws_c/install/my_cpp_package/lib/my_cpp_package/fast_timer_node" to ""
+[1.763s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/launch
+[1.763s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/launch/dual_timer.launch.py
+[1.763s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/ament_index/resource_index/package_run_dependencies/my_cpp_package
+[1.763s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/ament_index/resource_index/parent_prefix_path/my_cpp_package
+[1.763s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/environment/ament_prefix_path.sh
+[1.764s] -- Installing: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/environment/ament_prefix_path.dsv
+[1.764s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/environment/path.sh
+[1.764s] -- Installing: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/environment/path.dsv
+[1.764s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/local_setup.bash
+[1.764s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/local_setup.sh
+[1.764s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/local_setup.zsh
+[1.764s] -- Installing: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/local_setup.dsv
+[1.764s] -- Installing: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/package.dsv
+[1.765s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/ament_index/resource_index/packages/my_cpp_package
+[1.765s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/cmake/my_cpp_packageConfig.cmake
+[1.765s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/cmake/my_cpp_packageConfig-version.cmake
+[1.765s] -- Up-to-date: /home/js/ros2_ws_c/install/my_cpp_package/share/my_cpp_package/package.xml
+[1.770s] Invoked command in '/home/js/ros2_ws_c/build/my_cpp_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/js/ros2_ws/install/my_package:/opt/ros/humble /usr/local/bin/cmake --install /home/js/ros2_ws_c/build/my_cpp_package

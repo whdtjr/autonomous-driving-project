@@ -1,0 +1,80 @@
+[0.000000] (-) TimerEvent: {}
+[0.000205] (-) JobUnselected: {'identifier': 'my_cpp_package'}
+[0.000237] (tutorial_topic) JobQueued: {'identifier': 'tutorial_topic', 'dependencies': OrderedDict()}
+[0.000264] (tutorial_topic) JobStarted: {'identifier': 'tutorial_topic'}
+[0.015452] (tutorial_topic) JobProgress: {'identifier': 'tutorial_topic', 'progress': 'cmake'}
+[0.015861] (tutorial_topic) Command: {'cmd': ['/usr/local/bin/cmake', '/home/js/ros2_ws_c/src/tutorial_topic', '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON', '-DCMAKE_INSTALL_PREFIX=/home/js/ros2_ws_c/install/tutorial_topic'], 'cwd': '/home/js/ros2_ws_c/build/tutorial_topic', 'env': OrderedDict([('AMENT_PREFIX_PATH', '/home/js/ros2_ws_c/install/my_cpp_package:/home/js/ros2_ws/install/my_package:/opt/ros/humble'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('CMAKE_PREFIX_PATH', '/home/js/ros2_ws_c/install/my_cpp_package:/home/js/ros2_ws/install/my_package:/opt/ros/humble'), ('COLCON', '1'), ('COLCON_PREFIX_PATH', '/home/js/ros2_ws_c/install:/home/js/ros2_ws/install'), ('COLORTERM', 'truecolor'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('DESKTOP_SESSION', 'ubuntu'), ('DISPLAY', ':0'), ('GDK_BACKEND', 'x11'), ('GDMSESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8326'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GTK_IM_MODULE', 'ibus'), ('GTK_MODULES', 'gail:atk-bridge'), ('HOME', '/home/js'), ('INTERCEPT_REPORT_COMMAND', '/usr/lib/x86_64-linux-gnu/bear/wrapper'), ('INTERCEPT_REPORT_DESTINATION', 'dns:///localhost:37515'), ('INVOCATION_ID', '20e509e31493486bb2f7fd8ccf0a4872'), ('JOURNAL_STREAM', '8:15125'), ('LANG', 'en_US.UTF-8'), ('LANGUAGE', 'en_US:en'), ('LC_ADDRESS', 'ko_KR.UTF-8'), ('LC_IDENTIFICATION', 'ko_KR.UTF-8'), ('LC_MEASUREMENT', 'ko_KR.UTF-8'), ('LC_MONETARY', 'ko_KR.UTF-8'), ('LC_NAME', 'ko_KR.UTF-8'), ('LC_NUMERIC', 'ko_KR.UTF-8'), ('LC_PAPER', 'ko_KR.UTF-8'), ('LC_TELEPHONE', 'ko_KR.UTF-8'), ('LC_TIME', 'ko_KR.UTF-8'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('LD_PRELOAD', '/usr/$LIB/bear/libexec.so'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LOGNAME', 'js'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('MANAGERPID', '1164'), ('OLDPWD', '/home/js/ros2_ws_c/src'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PAPERSIZE', 'a4'), ('PATH', '/opt/ros/humble/bin:/home/js/.local/bin:/home/js/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('PWD', '/home/js/ros2_ws_c/build/tutorial_topic'), ('PYTHONPATH', '/home/js/ros2_ws/install/my_package/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('QT_ACCESSIBILITY', '1'), ('QT_IM_MODULE', 'ibus'), ('RCUTILS_COLORIZED_OUTPUT', '1'), ('RCUTILS_CONSOLE_OUTPUT_FORMAT', '[{severity}]: {message}'), ('RCUTILS_LOGGING_BUFFERED_STREAM', '1'), ('RCUTILS_LOGGING_USE_STDOUT', '0'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('ROS_DISTRO', 'humble'), ('ROS_LOCALHOST_ONLY', '0'), ('ROS_PYTHON_VERSION', '3'), ('ROS_VERSION', '2'), ('SESSION_MANAGER', 'local/js-MS-7D43:@/tmp/.ICE-unix/1446,unix/js-MS-7D43:/tmp/.ICE-unix/1446'), ('SHELL', '/bin/bash'), ('SHLVL', '1'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SYSTEMD_EXEC_PID', '1480'), ('TERM', 'xterm-256color'), ('TERM_PROGRAM', 'vscode'), ('TERM_PROGRAM_VERSION', '1.85.2'), ('USER', 'js'), ('USERNAME', 'js'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', '--ms-enable-electron-run-as-node'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-3ebeedd98d.sock'), ('WINDOWPATH', '2'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_SESSION_CLASS', 'user'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XDG_SESSION_TYPE', 'x11'), ('XMODIFIERS', '@im=ibus'), ('_', '/usr/bin/bear'), ('_colcon_cd_root', '/home/js/ros2_ws')]), 'shell': False}
+[0.099572] (-) TimerEvent: {}
+[0.178436] (tutorial_topic) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.1.0\n'}
+[0.199655] (-) TimerEvent: {}
+[0.300205] (-) TimerEvent: {}
+[0.341047] (tutorial_topic) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.1.0\n'}
+[0.352390] (tutorial_topic) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.400340] (-) TimerEvent: {}
+[0.500849] (-) TimerEvent: {}
+[0.601351] (-) TimerEvent: {}
+[0.661618] (tutorial_topic) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.679088] (tutorial_topic) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.679339] (tutorial_topic) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.679715] (tutorial_topic) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.682007] (tutorial_topic) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.701430] (-) TimerEvent: {}
+[0.801730] (-) TimerEvent: {}
+[0.900091] (tutorial_topic) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.901765] (-) TimerEvent: {}
+[0.905002] (tutorial_topic) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.905222] (tutorial_topic) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.905585] (tutorial_topic) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.907457] (tutorial_topic) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.001887] (-) TimerEvent: {}
+[1.064618] (tutorial_topic) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.102000] (-) TimerEvent: {}
+[1.141644] (tutorial_topic) StdoutLine: {'line': b'-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.175563] (tutorial_topic) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.178381] (tutorial_topic) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.183142] (tutorial_topic) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.190046] (tutorial_topic) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.199133] (tutorial_topic) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.202101] (-) TimerEvent: {}
+[1.224423] (tutorial_topic) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.225937] (tutorial_topic) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.302247] (-) TimerEvent: {}
+[1.402761] (-) TimerEvent: {}
+[1.503302] (-) TimerEvent: {}
+[1.588792] (tutorial_topic) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.603349] (-) TimerEvent: {}
+[1.622098] (tutorial_topic) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.680513] (tutorial_topic) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.687627] (tutorial_topic) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.703479] (-) TimerEvent: {}
+[1.803685] (-) TimerEvent: {}
+[1.864616] (tutorial_topic) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.865337] (tutorial_topic) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.903801] (-) TimerEvent: {}
+[2.004118] (-) TimerEvent: {}
+[2.104381] (-) TimerEvent: {}
+[2.132043] (tutorial_topic) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[2.132784] (tutorial_topic) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[2.170359] (tutorial_topic) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:11 (find_package):\n'}
+[2.170533] (tutorial_topic) StderrLine: {'line': b'  By not providing "Findgeometry_msg.cmake" in CMAKE_MODULE_PATH this project\n'}
+[2.170569] (tutorial_topic) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[2.170597] (tutorial_topic) StderrLine: {'line': b'  "geometry_msg", but CMake did not find one.\n'}
+[2.170624] (tutorial_topic) StderrLine: {'line': b'\n'}
+[2.170651] (tutorial_topic) StderrLine: {'line': b'  Could not find a package configuration file provided by "geometry_msg" with\n'}
+[2.170676] (tutorial_topic) StderrLine: {'line': b'  any of the following names:\n'}
+[2.170700] (tutorial_topic) StderrLine: {'line': b'\n'}
+[2.170723] (tutorial_topic) StderrLine: {'line': b'    geometry_msgConfig.cmake\n'}
+[2.170745] (tutorial_topic) StderrLine: {'line': b'    geometry_msg-config.cmake\n'}
+[2.170769] (tutorial_topic) StderrLine: {'line': b'\n'}
+[2.170792] (tutorial_topic) StderrLine: {'line': b'  Add the installation prefix of "geometry_msg" to CMAKE_PREFIX_PATH or set\n'}
+[2.170827] (tutorial_topic) StderrLine: {'line': b'  "geometry_msg_DIR" to a directory containing one of the above files.  If\n'}
+[2.170849] (tutorial_topic) StderrLine: {'line': b'  "geometry_msg" provides a separate development package or SDK, be sure it\n'}
+[2.170872] (tutorial_topic) StderrLine: {'line': b'  has been installed.\n'}
+[2.170894] (tutorial_topic) StderrLine: {'line': b'\n'}
+[2.170925] (tutorial_topic) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.170957] (tutorial_topic) StdoutLine: {'line': b'See also "/home/js/ros2_ws_c/build/tutorial_topic/CMakeFiles/CMakeOutput.log".\n'}
+[2.170981] (tutorial_topic) StderrLine: {'line': b'\x1b[0m\n'}
+[2.176406] (tutorial_topic) CommandEnded: {'returncode': 1}
+[2.202720] (tutorial_topic) JobEnded: {'identifier': 'tutorial_topic', 'rc': 1}
+[2.204416] (-) TimerEvent: {}
+[2.213232] (-) EventReactorShutdown: {}

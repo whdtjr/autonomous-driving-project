@@ -1,0 +1,4 @@
+Invoking command in '/home/js/ros2_ws_c/build/tutorial_topic': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/js/ros2_ws/install/my_package:/opt/ros/humble /usr/local/bin/cmake --build /home/js/ros2_ws_c/build/tutorial_topic -- -j16 -l16
+Invoked command in '/home/js/ros2_ws_c/build/tutorial_topic' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/js/ros2_ws/install/my_package:/opt/ros/humble /usr/local/bin/cmake --build /home/js/ros2_ws_c/build/tutorial_topic -- -j16 -l16
+Invoking command in '/home/js/ros2_ws_c/build/tutorial_topic': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/js/ros2_ws/install/my_package:/opt/ros/humble /usr/local/bin/cmake --install /home/js/ros2_ws_c/build/tutorial_topic
+Invoked command in '/home/js/ros2_ws_c/build/tutorial_topic' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/js/ros2_ws/install/my_package:/opt/ros/humble /usr/local/bin/cmake --install /home/js/ros2_ws_c/build/tutorial_topic

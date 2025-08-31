@@ -1,0 +1,8 @@
+[31mCMake Error at CMakeLists.txt:19:
+  Parse error.  Expected "(", got identifier with text
+  "ament_target_dependencies".
+
+[0m
+-- Configuring incomplete, errors occurred!
+See also "/home/js/ros2_ws_c/build/tutorial_topic/CMakeFiles/CMakeOutput.log".
+gmake: *** [Makefile:308: cmake_check_build_system] Error 1
