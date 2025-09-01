@@ -1,0 +1,1 @@
+/home/js/ros2_ws_c/build/tutorial_service/ament_cmake_core/tutorial_serviceConfig.cmake

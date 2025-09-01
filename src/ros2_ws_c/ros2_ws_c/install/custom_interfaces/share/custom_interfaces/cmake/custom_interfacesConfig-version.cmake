@@ -1,0 +1,1 @@
+/home/js/ros2_ws_c/build/custom_interfaces/ament_cmake_core/custom_interfacesConfig-version.cmake
