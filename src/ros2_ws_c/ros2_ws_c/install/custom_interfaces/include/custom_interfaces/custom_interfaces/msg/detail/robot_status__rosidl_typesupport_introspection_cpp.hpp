@@ -1,1 +1,0 @@
-/home/js/ros2_ws_c/build/custom_interfaces/rosidl_typesupport_introspection_cpp/custom_interfaces/msg/detail/robot_status__rosidl_typesupport_introspection_cpp.hpp

@@ -1,7 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000186] (-) JobUnselected: {'identifier': 'custom_interfaces'}
-[0.000291] (-) JobUnselected: {'identifier': 'custom_interfaces_example'}
-[0.000302] (-) JobUnselected: {'identifier': 'moving_service'}
-[0.000310] (-) JobUnselected: {'identifier': 'my_cpp_package'}
-[0.000318] (-) JobUnselected: {'identifier': 'tutorial_topic'}
-[0.000490] (-) EventReactorShutdown: {}

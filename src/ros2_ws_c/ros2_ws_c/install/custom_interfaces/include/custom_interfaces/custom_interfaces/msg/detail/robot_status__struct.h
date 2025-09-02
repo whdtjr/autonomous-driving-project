@@ -1,1 +1,0 @@
-/home/js/ros2_ws_c/build/custom_interfaces/rosidl_generator_c/custom_interfaces/msg/detail/robot_status__struct.h

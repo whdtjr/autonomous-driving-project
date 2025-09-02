@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/js/ros2_ws_c/build/moving_service/circle_node" "/home/js/ros2_ws_c/build/moving_service/spin_node" "TARGETS" "circle_node" "spin_node" "DESTINATION" "lib/moving_service")
