@@ -34,8 +34,8 @@ body:
   - type: textarea
     id: impact
     attributes:
-      label: 영향 범위
-      placeholder: 드라이버/펌웨어/문서/테스트 등 영향 모듈
+      label: 구현 내용 결과 첨부
+      placeholder: 구현했던 것 코드나 결과 사진
   - type: textarea
     id: test
     attributes:
