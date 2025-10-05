@@ -1,1 +1,0 @@
-/home/js/ros2_ws_c/src/custom_interfaces/msg/RobotStatus.msg

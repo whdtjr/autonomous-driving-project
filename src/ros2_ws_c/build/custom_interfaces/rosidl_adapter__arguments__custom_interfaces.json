@@ -1,6 +1,0 @@
-{
-  "package_name": "custom_interfaces",
-  "non_idl_tuples": [
-    "/home/js/ros2_ws_c/src/custom_interfaces:msg/RobotStatus.msg"
-  ]
-}
