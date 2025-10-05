@@ -22,6 +22,9 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "esp.h"
 
 /* USER CODE END Includes */
 
@@ -39,6 +42,8 @@
 #else
 #define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
 #endif /* __GNUC__ */
+#define ARR_CNT 5
+#define CMD_SIZE 50
 
 /* USER CODE END PD */
 
@@ -51,6 +56,7 @@
 TIM_HandleTypeDef htim3;
 
 UART_HandleTypeDef huart2;
+UART_HandleTypeDef huart6;
 
 /* USER CODE BEGIN PV */
 volatile int time3SecFlag = 0;
@@ -64,6 +70,12 @@ uint8_t state_led = 0;	// 0 = GREEN, 1 = YELLOW, 2 = RED
 uint8_t time_led = 0;	// 남은 시간
 const char* led_names[] = {"GREEN", "YELLOW", "RED"};
 
+// wifi
+uint8_t rx2char;
+extern cb_data_t cb_data;
+extern volatile unsigned char rx2Flag;
+extern volatile char rx2Data[50];
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -71,7 +83,11 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_TIM3_Init(void);
+static void MX_USART6_UART_Init(void);
+
 /* USER CODE BEGIN PFP */
+char strBuff[MAX_ESP_COMMAND_LEN];
+void esp_event(char *);
 
 /* USER CODE END PFP */
 
@@ -109,7 +125,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+	int ret = 0;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -132,10 +148,23 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_TIM3_Init();
+  MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
   printf("main start()!!\r\n");
   if(HAL_TIM_Base_Start_IT(&htim3) != HAL_OK)
 	  Error_Handler();
+
+  // wifi
+  printf("Start main() - wifi\r\n");
+  ret |= drv_uart_init();
+  ret |= drv_esp_init();
+  if(ret != 0)
+  {
+	  printf("Esp response error\r\n");
+	  Error_Handler();
+  }
+
+  AiotClient_Init();
 
   // 초기 설정
   state_led = 0;			// 초기값이 green
@@ -148,11 +177,47 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  if(strstr((char *)cb_data.buf,"+IPD") && cb_data.buf[cb_data.length-1] == '\n')
+	  {
+		  //?��?��?���??  \r\n+IPD,15:[KSH_LIN]HELLO\n
+		  strcpy(strBuff,strchr((char *)cb_data.buf,'['));
+		  memset(cb_data.buf,0x0,sizeof(cb_data.buf));
+		  cb_data.length = 0;
+		  esp_event(strBuff);
+	  }
+	  if(rx2Flag)
+	  {
+		  printf("recv2 : %s\r\n",rx2Data);
+		  rx2Flag =0;
+	  }
+//	  if(esp_get_status() != 0)
+//	  {
+//			printf("server connecting ...\r\n");
+//			esp_client_conn();
+//	  }
+
+
 	  if(time3SecFlag)
 	  {
+		  if(!(time3SecCnt%3))		// 서버랑 연결 안되면 3초에 한 번씩 재연결
+		  {
+			  if(esp_get_status() != 0)
+			  {
+					printf("server connecting ...\r\n");
+					esp_client_conn();
+			  }
+		  }
+
 		  time3SecFlag = 0;
 		  printf("led_names : %s \r\n", led_names[state_led]);
 		  printf("time_led : 00:%02d \r\n", time_led);
+
+		  // 신호등 상태, 시간 SQL(db)에 보내기
+		  char sendBuf[MAX_UART_COMMAND_LEN]={0};
+		  sprintf(sendBuf,"[%s]TIME@%d@%s@Z1\n","JAB_SQL", time_led, led_names[state_led]);
+		  esp_send_data(sendBuf);
+
+		  printf("Debug send : %s\r\n",sendBuf);
 	  }
     /* USER CODE END WHILE */
 
@@ -299,6 +364,39 @@ static void MX_USART2_UART_Init(void)
 }
 
 /**
+  * @brief USART6 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART6_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART6_Init 0 */
+
+  /* USER CODE END USART6_Init 0 */
+
+  /* USER CODE BEGIN USART6_Init 1 */
+
+  /* USER CODE END USART6_Init 1 */
+  huart6.Instance = USART6;
+  huart6.Init.BaudRate = 38400;
+  huart6.Init.WordLength = UART_WORDLENGTH_8B;
+  huart6.Init.StopBits = UART_STOPBITS_1;
+  huart6.Init.Parity = UART_PARITY_NONE;
+  huart6.Init.Mode = UART_MODE_TX_RX;
+  huart6.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart6.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART6_Init 2 */
+
+  /* USER CODE END USART6_Init 2 */
+
+}
+
+/**
   * @brief GPIO Initialization Function
   * @param None
   * @retval None
@@ -353,14 +451,14 @@ static void MX_GPIO_Init(void)
   * @param  None
   * @retval None
   */
-PUTCHAR_PROTOTYPE
-{
-  /* Place your implementation of fputc here */
-  /* e.g. write a character to the USART6 and Loop until the end of transmission */
-  HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
-
-  return ch;
-}
+//PUTCHAR_PROTOTYPE
+//{
+//  /* Place your implementation of fputc here */
+//  /* e.g. write a character to the USART6 and Loop until the end of transmission */
+//  HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
+//
+//  return ch;
+//}
 
 // TIM3 인터럽트 콜백
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
@@ -380,6 +478,69 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
             set_led(state_led);
         }
     }
+}
+
+// wifi event
+void esp_event(char * recvBuf)
+{
+	printf("wifi test!!!\r\n");
+  int i=0;
+  char * pToken;
+  char * pArray[ARR_CNT]={0};
+  char sendBuf[MAX_UART_COMMAND_LEN]={0};
+
+  strBuff[strlen(recvBuf)-1] = '\0';	//'\n' cut
+  printf("\r\nDebug recv : %s\r\n",recvBuf);
+
+  pToken = strtok(recvBuf,"[@]");
+  while(pToken != NULL)
+  {
+    pArray[i] = pToken;
+    if(++i >= ARR_CNT)
+      break;
+    pToken = strtok(NULL,"[@]");
+  }
+
+  if(!strcmp(pArray[1],"STATE"))
+  {
+  	if(!strcmp(pArray[2],"GET"))
+  	{
+  		printf(">>>>>state test\r\n");
+
+  	  	// [JAB_SQL]STATE@RED@Z1
+  	  	printf("state_led = %s\r\n", led_names[state_led]);
+  	  	sprintf(sendBuf,"[%s]STATE@%s@Z1\n","JAB_SQL", led_names[state_led]);
+  	}
+  }
+
+  if(!strcmp(pArray[1],"TIME"))
+  {
+  	if(!strcmp(pArray[2],"GET"))
+  	{
+  		printf(">>>>time test\r\n");
+
+  	  	// [JAB_SQL]TIME@20@RED@Z1
+  	  	printf("time_led = %d\r\n", time_led);
+  	  	sprintf(sendBuf,"[%s]TIME@%d@%s@Z1\n","JAB_SQL", time_led, led_names[state_led]);
+  	}
+  }
+
+  else if(!strncmp(pArray[1]," New conn",8))
+  {
+//	   printf("Debug : %s, %s\r\n",pArray[0],pArray[1]);
+     return;
+  }
+  else if(!strncmp(pArray[1]," Already log",8))
+  {
+// 	    printf("Debug : %s, %s\r\n",pArray[0],pArray[1]);
+	  esp_client_conn();
+      return;
+  }
+  else
+      return;
+
+  esp_send_data(sendBuf);
+  printf("Debug send : %s\r\n",sendBuf);
 }
 
 /* USER CODE END 4 */
