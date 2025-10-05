@@ -114,6 +114,7 @@ void* recv_msg(void* arg)
 	MYSQL_ROW sqlrow;
 	int res;
 	char sql_cmd[200] = { 0 };
+	char socket_cmd[200] = { 0 };
 
 	// db 접속 정보
 	char* host = "localhost";
@@ -177,7 +178,8 @@ void* recv_msg(void* arg)
 				printf("MEMBER : updated %lu rows\n", (unsigned long)mysql_affected_rows(conn));
 		}	
 //--------------time_light UPDATE		
-		// [JAB_SQL]TIME@20@RED@Z1
+		// STM -> [JAB_SQL]TIME@20@RED@Z1
+		// SQL -> [JAB_QT]TIME@20@RED@Z1
 		if(!strcmp(pArray[1],"TIME") && (i == 5)){
 			time_led = atoi(pArray[2]);
 
@@ -186,6 +188,10 @@ void* recv_msg(void* arg)
 			res = mysql_query(conn, sql_cmd);
 			if (!res)
 				printf("MEMBER : updated %lu rows\n", (unsigned long)mysql_affected_rows(conn));
+
+			// QT한테 전송	
+			sprintf(socket_cmd, "[%s]%s@%s@%s@%s\n","JAB_QT",pArray[1],pArray[2],pArray[3],pArray[4]);
+			write(*sock, socket_cmd, strlen(socket_cmd));
 		}	
 //------------------------------------		
 		else 
