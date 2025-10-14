@@ -53,10 +53,15 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+IWDG_HandleTypeDef hiwdg;
+
 TIM_HandleTypeDef htim3;
 
+UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart6;
+DMA_HandleTypeDef hdma_usart1_rx;
+DMA_HandleTypeDef hdma_usart1_tx;
 
 /* USER CODE BEGIN PV */
 volatile int time3SecFlag = 0;
@@ -76,18 +81,26 @@ extern cb_data_t cb_data;
 extern volatile unsigned char rx2Flag;
 extern volatile char rx2Data[50];
 
+// watchdog
+static volatile uint8_t wdKickReady = 0;    // 1초마다 한 번만 refresh 허용
+static volatile uint8_t cp_main_ok  = 0;    // 체크포인트: 메인 주기 처리 OK
+static volatile uint8_t cp_net_ok   = 0;    // 체크포인트: Wi-Fi/TCP 처리 OK
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_USART6_UART_Init(void);
-
+static void MX_IWDG_Init(void);
+static void MX_USART1_UART_Init(void);
 /* USER CODE BEGIN PFP */
 char strBuff[MAX_ESP_COMMAND_LEN];
 void esp_event(char *);
+static void PrintResetReason(void);
 
 /* USER CODE END PFP */
 
@@ -114,6 +127,15 @@ void set_led(uint8_t state_led)
             time_led = RED_TIME;
             break;
     }
+}
+
+// 리셋 원인 출력
+static void PrintResetReason(void)
+{
+    if (__HAL_RCC_GET_FLAG(RCC_FLAG_IWDGRST)) {
+        printf("\r\n[BOOT] Reset by IWDG\r\n");
+    }
+    __HAL_RCC_CLEAR_RESET_FLAGS();
 }
 /* USER CODE END 0 */
 
@@ -146,9 +168,12 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_USART2_UART_Init();
   MX_TIM3_Init();
   MX_USART6_UART_Init();
+  MX_IWDG_Init();
+  MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
   printf("main start()!!\r\n");
   if(HAL_TIM_Base_Start_IT(&htim3) != HAL_OK)
@@ -171,30 +196,28 @@ int main(void)
   time_led = GREEN_TIME;
   set_led(state_led);
 
+  PrintResetReason();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  // --- 네트워크/수신 처리 ---
 	  if(strstr((char *)cb_data.buf,"+IPD") && cb_data.buf[cb_data.length-1] == '\n')
 	  {
-		  //?��?��?���??  \r\n+IPD,15:[KSH_LIN]HELLO\n
 		  strcpy(strBuff,strchr((char *)cb_data.buf,'['));
 		  memset(cb_data.buf,0x0,sizeof(cb_data.buf));
 		  cb_data.length = 0;
 		  esp_event(strBuff);
 	  }
+
 	  if(rx2Flag)
 	  {
 		  printf("recv2 : %s\r\n",rx2Data);
 		  rx2Flag =0;
 	  }
-//	  if(esp_get_status() != 0)
-//	  {
-//			printf("server connecting ...\r\n");
-//			esp_client_conn();
-//	  }
 
 
 	  if(time3SecFlag)
@@ -206,6 +229,14 @@ int main(void)
 					printf("server connecting ...\r\n");
 					esp_client_conn();
 			  }
+
+		      // [MOD-B] 재연결 시도 후 "현재 링크 상태"로 cp_net_ok를 판정
+		      if (esp_get_status() == 0) {
+		          cp_net_ok = 1;    // 링크 정상(ONLINE)
+		          printf(">>>>>debug\r\n");
+		      }
+
+		      wdKickReady = 1;      // 3초에 한 번 와치독 킥 허용
 		  }
 
 		  time3SecFlag = 0;
@@ -216,9 +247,27 @@ int main(void)
 		  char sendBuf[MAX_UART_COMMAND_LEN]={0};
 		  sprintf(sendBuf,"[%s]TIME@%d@%s@Z1\n","JAB_SQL", time_led, led_names[state_led]);
 		  esp_send_data(sendBuf);
-
 		  printf("Debug send : %s\r\n",sendBuf);
+
+		  cp_main_ok = 1;
 	  }
+
+	  // --- 와치독 refresh: 3초마다, 그리고 체크포인트가 모두 OK일 때만 ---
+	    if (wdKickReady) {
+	        wdKickReady = 0;
+
+	        // “핵심 루틴들이 이 3초 안에 최소 한 번은 정상 동작했는가?”
+	        if (cp_main_ok && cp_net_ok) {
+	            HAL_IWDG_Refresh(&hiwdg); // 킥!
+	        } else {
+	            // 일부가 멈췄다면 refresh를 생략 → 일정 시간 뒤 IWDG가 리셋 유도
+	            printf("[WDT] skip refresh: main_ok=%d, net_ok=%d\r\n", cp_main_ok, cp_net_ok);
+	        }
+
+	        // 다음 3초를 위해 체크포인트 초기화
+	        cp_main_ok = 0;
+	        cp_net_ok  = 0;
+	    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -243,9 +292,10 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI|RCC_OSCILLATORTYPE_LSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 16;
@@ -270,6 +320,34 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief IWDG Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_IWDG_Init(void)
+{
+
+  /* USER CODE BEGIN IWDG_Init 0 */
+
+  /* USER CODE END IWDG_Init 0 */
+
+  /* USER CODE BEGIN IWDG_Init 1 */
+
+  /* USER CODE END IWDG_Init 1 */
+  hiwdg.Instance = IWDG;
+  hiwdg.Init.Prescaler = IWDG_PRESCALER_128;
+  hiwdg.Init.Reload = 2500-1;
+  if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN IWDG_Init 2 */
+
+  /* USER CODE END IWDG_Init 2 */
+
 }
 
 /**
@@ -327,6 +405,39 @@ static void MX_TIM3_Init(void)
   /* USER CODE BEGIN TIM3_Init 2 */
 
   /* USER CODE END TIM3_Init 2 */
+
+}
+
+/**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
 
 }
 
@@ -393,6 +504,25 @@ static void MX_USART6_UART_Init(void)
   /* USER CODE BEGIN USART6_Init 2 */
 
   /* USER CODE END USART6_Init 2 */
+
+}
+
+/**
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void)
+{
+
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA2_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA2_Stream2_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Stream2_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Stream2_IRQn);
+  /* DMA2_Stream7_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Stream7_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Stream7_IRQn);
 
 }
 

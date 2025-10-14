@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  00016f78  00000000  00000000  00017244  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000ccef  00000000  00000000  0002e1bc  2**0
+ 17 .debug_line   0000cced  00000000  00000000  0002e1bc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0008b344  00000000  00000000  0003aeab  2**0
+ 18 .debug_str    0008b344  00000000  00000000  0003aea9  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  000c61ef  2**0
+ 19 .comment      00000043  00000000  00000000  000c61ed  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00003b10  00000000  00000000  000c6234  2**2
+ 20 .debug_frame  00003b10  00000000  00000000  000c6230  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000071  00000000  00000000  000c9d44  2**0
+ 21 .debug_line_str 00000071  00000000  00000000  000c9d40  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -2202,11 +2202,11 @@ int main(void)
  80015a8:	4619      	mov	r1, r3
  80015aa:	483e      	ldr	r0, [pc, #248]	@ (80016a4 <main+0x1d4>)
  80015ac:	f004 f8d6 	bl	800575c <iprintf>
-			   mx, my, mz, hdg);
-	  }
-	  HAL_Delay(50); // 출력 주기 약 20Hz
-	}
-#endif
+  {
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+#if 1
 		MPU9250_Result_t r = MPU9250_ReadMag(&mpu);
  80015b0:	4835      	ldr	r0, [pc, #212]	@ (8001688 <main+0x1b8>)
  80015b2:	f7ff fe49 	bl	8001248 <MPU9250_ReadMag>
@@ -2244,8 +2244,8 @@ int main(void)
  800160c:	ee67 7a27 	vmul.f32	s15, s14, s15
  8001610:	edc7 7a02 	vstr	s15, [r7, #8]
 
-		    // |B| 계산
-		    float B_mag = sqrtf(mx*mx + my*my + mz*mz);
+			// |B| 계산
+			float B_mag = sqrtf(mx*mx + my*my + mz*mz);
  8001614:	edd7 7a04 	vldr	s15, [r7, #16]
  8001618:	ee27 7aa7 	vmul.f32	s14, s15, s15
  800161c:	edd7 7a03 	vldr	s15, [r7, #12]
@@ -2258,7 +2258,7 @@ int main(void)
  8001638:	f006 f86c 	bl	8007714 <sqrtf>
  800163c:	ed87 0a01 	vstr	s0, [r7, #4]
 
-		    printf("Mag(uT) X:%.2f Y:%.2f Z:%.2f \r\n", mx, my, mz);
+			printf("Mag(uT) X:%.2f Y:%.2f Z:%.2f \r\n", mx, my, mz);
  8001640:	6938      	ldr	r0, [r7, #16]
  8001642:	f7fe ff89 	bl	8000558 <__aeabi_f2d>
  8001646:	4680      	mov	r8, r0
@@ -2277,7 +2277,7 @@ int main(void)
  8001668:	464b      	mov	r3, r9
  800166a:	480f      	ldr	r0, [pc, #60]	@ (80016a8 <main+0x1d8>)
  800166c:	f004 f876 	bl	800575c <iprintf>
-		    printf("|B| = %.1f (uT) \r\n", B_mag);
+			printf("|B| = %.1f (uT) \r\n", B_mag);
  8001670:	6878      	ldr	r0, [r7, #4]
  8001672:	f7fe ff71 	bl	8000558 <__aeabi_f2d>
  8001676:	4602      	mov	r2, r0
