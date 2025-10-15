@@ -1,0 +1,883 @@
+[0.073s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'ros2_client']
+[0.073s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['ros2_client'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7626bc543ee0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7626bc543b20>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7626bc543b20>>)
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.229s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.230s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.231s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.232s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.232s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ubuntu/Workspace/final_project/autonomous-driving-project'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extension 'ignore_ament_install'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extensions ['colcon_pkg']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extension 'colcon_pkg'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extensions ['colcon_meta']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extension 'colcon_meta'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extensions ['ros']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extension 'ros'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extensions ['cmake', 'python']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extension 'cmake'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extension 'python'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extensions ['python_setup_py']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(STM) by extension 'python_setup_py'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extensions ['ros']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extension 'ros'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extensions ['cmake', 'python']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extension 'cmake'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extension 'python'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extensions ['python_setup_py']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test) by extension 'python_setup_py'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extension 'ignore_ament_install'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extensions ['colcon_pkg']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extension 'colcon_pkg'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extensions ['colcon_meta']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extension 'colcon_meta'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extensions ['ros']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extension 'ros'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extensions ['cmake', 'python']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extension 'cmake'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extension 'python'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extensions ['python_setup_py']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core) by extension 'python_setup_py'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extension 'ignore'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extension 'ignore_ament_install'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extensions ['colcon_pkg']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extension 'colcon_pkg'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extensions ['colcon_meta']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extension 'colcon_meta'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extension 'ros'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extensions ['cmake', 'python']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extension 'cmake'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extension 'python'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extensions ['python_setup_py']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Inc) by extension 'python_setup_py'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extensions ['ignore', 'ignore_ament_install']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extension 'ignore'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extension 'ignore_ament_install'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extensions ['colcon_pkg']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extension 'colcon_pkg'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extensions ['colcon_meta']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extension 'colcon_meta'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extensions ['ros']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extension 'ros'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extensions ['cmake', 'python']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extension 'cmake'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extension 'python'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extensions ['python_setup_py']
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Src) by extension 'python_setup_py'
+[0.257s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extensions ['ignore', 'ignore_ament_install']
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extension 'ignore'
+[0.258s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extension 'ignore_ament_install'
+[0.259s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extensions ['colcon_pkg']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extension 'colcon_pkg'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extensions ['colcon_meta']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extension 'colcon_meta'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extensions ['ros']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extension 'ros'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extensions ['cmake', 'python']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extension 'cmake'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extension 'python'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extensions ['python_setup_py']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Core/Startup) by extension 'python_setup_py'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extensions ['ignore', 'ignore_ament_install']
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extension 'ignore'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extension 'ignore_ament_install'
+[0.260s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extensions ['colcon_pkg']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extension 'colcon_pkg'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extensions ['colcon_meta']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extension 'colcon_meta'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extensions ['ros']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extension 'ros'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extensions ['cmake', 'python']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extension 'cmake'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extension 'python'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extensions ['python_setup_py']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug) by extension 'python_setup_py'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extensions ['ignore', 'ignore_ament_install']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extension 'ignore'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extension 'ignore_ament_install'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extensions ['colcon_pkg']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extension 'colcon_pkg'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extensions ['colcon_meta']
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extension 'colcon_meta'
+[0.261s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extensions ['ros']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extension 'ros'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extensions ['cmake', 'python']
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extension 'cmake'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extension 'python'
+[0.262s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extensions ['python_setup_py']
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core) by extension 'python_setup_py'
+[0.263s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extensions ['ignore', 'ignore_ament_install']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extension 'ignore'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extension 'ignore_ament_install'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extensions ['colcon_pkg']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extension 'colcon_pkg'
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extensions ['colcon_meta']
+[0.264s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extension 'colcon_meta'
+[0.265s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extensions ['ros']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extension 'ros'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extensions ['cmake', 'python']
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extension 'cmake'
+[0.266s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extension 'python'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extensions ['python_setup_py']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Src) by extension 'python_setup_py'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extensions ['ignore', 'ignore_ament_install']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extension 'ignore'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extension 'ignore_ament_install'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extensions ['colcon_pkg']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extension 'colcon_pkg'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extensions ['colcon_meta']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extension 'colcon_meta'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extensions ['ros']
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extension 'ros'
+[0.267s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extensions ['cmake', 'python']
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extension 'cmake'
+[0.268s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extension 'python'
+[0.269s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extensions ['python_setup_py']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Core/Startup) by extension 'python_setup_py'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extensions ['ignore', 'ignore_ament_install']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extension 'ignore'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extension 'ignore_ament_install'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extensions ['colcon_pkg']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extension 'colcon_pkg'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extensions ['colcon_meta']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extension 'colcon_meta'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extensions ['ros']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extension 'ros'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extensions ['cmake', 'python']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extension 'cmake'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extension 'python'
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extensions ['python_setup_py']
+[0.270s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers) by extension 'python_setup_py'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['colcon_meta']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'colcon_meta'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['ros']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'ros'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['cmake', 'python']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'cmake'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'python'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['python_setup_py']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'python_setup_py'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['ignore', 'ignore_ament_install']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ignore'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ignore_ament_install'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['colcon_pkg']
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'colcon_pkg'
+[0.271s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['colcon_meta']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'colcon_meta'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['ros']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ros'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['cmake', 'python']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'cmake'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'python'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['python_setup_py']
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'python_setup_py'
+[0.272s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extensions ['ignore', 'ignore_ament_install']
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extension 'ignore'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extension 'ignore_ament_install'
+[0.273s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extensions ['colcon_pkg']
+[0.274s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extension 'colcon_meta'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extension 'ros'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extensions ['cmake', 'python']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extension 'cmake'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extension 'python'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extensions ['python_setup_py']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers) by extension 'python_setup_py'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extension 'ignore_ament_install'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extensions ['colcon_pkg']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extension 'colcon_pkg'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extensions ['colcon_meta']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extension 'colcon_meta'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extensions ['ros']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extension 'ros'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extensions ['cmake', 'python']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extension 'cmake'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extension 'python'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extensions ['python_setup_py']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS) by extension 'python_setup_py'
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extensions ['ignore', 'ignore_ament_install']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extension 'ignore'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extension 'ignore_ament_install'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extensions ['colcon_pkg']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extension 'colcon_pkg'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extensions ['colcon_meta']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extension 'colcon_meta'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extensions ['ros']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extension 'ros'
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extensions ['cmake', 'python']
+[0.280s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extension 'cmake'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extension 'python'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extensions ['python_setup_py']
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device) by extension 'python_setup_py'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extension 'ros'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extensions ['cmake', 'python']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extension 'cmake'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extension 'python'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extensions ['python_setup_py']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST) by extension 'python_setup_py'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'ignore'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'ignore_ament_install'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['colcon_pkg']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'colcon_pkg'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['colcon_meta']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'colcon_meta'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['ros']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'ros'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['cmake', 'python']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'cmake'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'python'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['python_setup_py']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'python_setup_py'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['ignore', 'ignore_ament_install']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'ignore'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'ignore_ament_install'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['colcon_pkg']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'colcon_pkg'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['colcon_meta']
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'colcon_meta'
+[0.285s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['ros']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'ros'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['cmake', 'python']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'cmake'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'python'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['python_setup_py']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'python_setup_py'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extension 'ignore_ament_install'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extensions ['colcon_pkg']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extension 'colcon_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extension 'ros'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extensions ['cmake', 'python']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extension 'cmake'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extension 'python'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extensions ['python_setup_py']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/CMSIS/Include) by extension 'python_setup_py'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extensions ['ignore', 'ignore_ament_install']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extension 'ignore'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extension 'ignore_ament_install'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extensions ['colcon_pkg']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extension 'colcon_pkg'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extensions ['colcon_meta']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extension 'ros'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extensions ['cmake', 'python']
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extension 'cmake'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extension 'python'
+[0.294s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extensions ['python_setup_py']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver) by extension 'python_setup_py'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['ignore', 'ignore_ament_install']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'ignore'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'ignore_ament_install'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['colcon_pkg']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'colcon_pkg'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['colcon_meta']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'colcon_meta'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['ros']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'ros'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['cmake', 'python']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'cmake'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'python'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['python_setup_py']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'python_setup_py'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['ignore', 'ignore_ament_install']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'ignore'
+[0.300s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'ignore_ament_install'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['colcon_pkg']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'colcon_pkg'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['colcon_meta']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'colcon_meta'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'ros'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['cmake', 'python']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'cmake'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'python'
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['python_setup_py']
+[0.303s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'python_setup_py'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['ignore', 'ignore_ament_install']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ignore'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ignore_ament_install'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['colcon_pkg']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'colcon_pkg'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['colcon_meta']
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'colcon_meta'
+[0.304s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['ros']
+[0.305s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ros'
+[0.306s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['cmake', 'python']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'cmake'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'python'
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['python_setup_py']
+[0.307s] Level 1:colcon.colcon_core.package_identification:_identify(STM/mpu9250_test/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'python_setup_py'
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extensions ['ignore', 'ignore_ament_install']
+[0.308s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extension 'ignore'
+[0.309s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extension 'ignore_ament_install'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extensions ['colcon_pkg']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extension 'colcon_pkg'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extensions ['colcon_meta']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extension 'colcon_meta'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extensions ['ros']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extension 'ros'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extensions ['cmake', 'python']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extension 'cmake'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extension 'python'
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extensions ['python_setup_py']
+[0.310s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light) by extension 'python_setup_py'
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extensions ['ignore', 'ignore_ament_install']
+[0.311s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extension 'ignore'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extension 'ignore_ament_install'
+[0.312s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extensions ['colcon_pkg']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extension 'colcon_pkg'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extensions ['colcon_meta']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extension 'colcon_meta'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extensions ['ros']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extension 'ros'
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extensions ['cmake', 'python']
+[0.313s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extension 'cmake'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extension 'python'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extensions ['python_setup_py']
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core) by extension 'python_setup_py'
+[0.314s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extensions ['ignore', 'ignore_ament_install']
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extension 'ignore'
+[0.315s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extension 'ignore_ament_install'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extensions ['colcon_pkg']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extension 'colcon_pkg'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extensions ['colcon_meta']
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extension 'colcon_meta'
+[0.316s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extensions ['ros']
+[0.317s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extension 'ros'
+[0.318s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extensions ['cmake', 'python']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extension 'cmake'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extension 'python'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extensions ['python_setup_py']
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Inc) by extension 'python_setup_py'
+[0.319s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extensions ['ignore', 'ignore_ament_install']
+[0.320s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extension 'ignore'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extension 'ignore_ament_install'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extensions ['colcon_pkg']
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extension 'colcon_pkg'
+[0.321s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extensions ['colcon_meta']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extension 'colcon_meta'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extensions ['ros']
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extension 'ros'
+[0.322s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extensions ['cmake', 'python']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extension 'cmake'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extension 'python'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extensions ['python_setup_py']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Src) by extension 'python_setup_py'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extensions ['ignore', 'ignore_ament_install']
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extension 'ignore'
+[0.323s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extension 'ignore_ament_install'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extensions ['colcon_pkg']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extension 'colcon_pkg'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extensions ['colcon_meta']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extension 'colcon_meta'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extensions ['ros']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extension 'ros'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extensions ['cmake', 'python']
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extension 'cmake'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extension 'python'
+[0.325s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extensions ['python_setup_py']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Core/Startup) by extension 'python_setup_py'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extensions ['ignore', 'ignore_ament_install']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extension 'ignore'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extension 'ignore_ament_install'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extensions ['colcon_pkg']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extension 'colcon_pkg'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extensions ['colcon_meta']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extension 'colcon_meta'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extensions ['ros']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extension 'ros'
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extensions ['cmake', 'python']
+[0.327s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extension 'cmake'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extension 'python'
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extensions ['python_setup_py']
+[0.328s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug) by extension 'python_setup_py'
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extensions ['ignore', 'ignore_ament_install']
+[0.329s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extension 'ignore'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extension 'ignore_ament_install'
+[0.330s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extensions ['colcon_pkg']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extension 'colcon_pkg'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extensions ['colcon_meta']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extension 'colcon_meta'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extensions ['ros']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extension 'ros'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extensions ['cmake', 'python']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extension 'cmake'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extension 'python'
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extensions ['python_setup_py']
+[0.331s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core) by extension 'python_setup_py'
+[0.332s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extensions ['ignore', 'ignore_ament_install']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extension 'ignore'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extension 'ignore_ament_install'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extensions ['colcon_pkg']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extension 'colcon_pkg'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extensions ['colcon_meta']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extension 'colcon_meta'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extensions ['ros']
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extension 'ros'
+[0.333s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extensions ['cmake', 'python']
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extension 'cmake'
+[0.334s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extension 'python'
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extensions ['python_setup_py']
+[0.335s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Src) by extension 'python_setup_py'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extension 'ignore'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extension 'ignore_ament_install'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extensions ['colcon_pkg']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extension 'colcon_pkg'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extensions ['colcon_meta']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extension 'colcon_meta'
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extensions ['ros']
+[0.337s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extension 'ros'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extensions ['cmake', 'python']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extension 'cmake'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extension 'python'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extensions ['python_setup_py']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Core/Startup) by extension 'python_setup_py'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extensions ['ignore', 'ignore_ament_install']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extension 'ignore_ament_install'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extensions ['colcon_pkg']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extension 'colcon_pkg'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extensions ['colcon_meta']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extension 'colcon_meta'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extensions ['ros']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extension 'ros'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extensions ['cmake', 'python']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extension 'cmake'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extension 'python'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extensions ['python_setup_py']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers) by extension 'python_setup_py'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'ignore'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'ignore_ament_install'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['colcon_pkg']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'colcon_pkg'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['colcon_meta']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'colcon_meta'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['ros']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'ros'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['cmake', 'python']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'cmake'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'python'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extensions ['python_setup_py']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver) by extension 'python_setup_py'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['ignore', 'ignore_ament_install']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ignore'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ignore_ament_install'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['colcon_pkg']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'colcon_pkg'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['colcon_meta']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'colcon_meta'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['ros']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ros'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['cmake', 'python']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'cmake'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'python'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['python_setup_py']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Debug/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'python_setup_py'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extensions ['ignore', 'ignore_ament_install']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extension 'ignore'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extension 'ignore_ament_install'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extensions ['colcon_pkg']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extension 'colcon_pkg'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extensions ['colcon_meta']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extension 'colcon_meta'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extensions ['ros']
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extension 'ros'
+[0.340s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extensions ['cmake', 'python']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extension 'cmake'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extension 'python'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extensions ['python_setup_py']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers) by extension 'python_setup_py'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extensions ['ignore', 'ignore_ament_install']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extension 'ignore'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extension 'ignore_ament_install'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extensions ['colcon_pkg']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extension 'colcon_pkg'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extensions ['colcon_meta']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extension 'colcon_meta'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extensions ['ros']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extension 'ros'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extensions ['cmake', 'python']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extension 'cmake'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extension 'python'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extensions ['python_setup_py']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS) by extension 'python_setup_py'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extensions ['ignore', 'ignore_ament_install']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extension 'ignore'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extension 'ignore_ament_install'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extensions ['colcon_pkg']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extension 'colcon_pkg'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extensions ['colcon_meta']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extension 'colcon_meta'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extensions ['ros']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extension 'ros'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extensions ['cmake', 'python']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extension 'cmake'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extension 'python'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extensions ['python_setup_py']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device) by extension 'python_setup_py'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extensions ['ignore', 'ignore_ament_install']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extension 'ignore'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extension 'ignore_ament_install'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extensions ['colcon_pkg']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extension 'colcon_pkg'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extensions ['colcon_meta']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extension 'colcon_meta'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extensions ['ros']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extension 'ros'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extensions ['cmake', 'python']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extension 'cmake'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extension 'python'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extensions ['python_setup_py']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST) by extension 'python_setup_py'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'ignore'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'ignore_ament_install'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['colcon_pkg']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'colcon_pkg'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['colcon_meta']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'colcon_meta'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['ros']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'ros'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['cmake', 'python']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'cmake'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'python'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extensions ['python_setup_py']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx) by extension 'python_setup_py'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'ignore_ament_install'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['colcon_pkg']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'colcon_pkg'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['colcon_meta']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'colcon_meta'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['ros']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'ros'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['cmake', 'python']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'cmake'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'python'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extensions ['python_setup_py']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Device/ST/STM32F4xx/Include) by extension 'python_setup_py'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extension 'ignore'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extension 'ignore_ament_install'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extensions ['colcon_pkg']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extension 'colcon_pkg'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extensions ['colcon_meta']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extension 'colcon_meta'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extensions ['ros']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extension 'ros'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extensions ['cmake', 'python']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extension 'cmake'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extension 'python'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extensions ['python_setup_py']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/CMSIS/Include) by extension 'python_setup_py'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extensions ['ignore', 'ignore_ament_install']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extension 'ignore'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extension 'ignore_ament_install'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extensions ['colcon_pkg']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extension 'colcon_pkg'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extensions ['colcon_meta']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extension 'colcon_meta'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extensions ['ros']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extension 'ros'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extensions ['cmake', 'python']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extension 'cmake'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extension 'python'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extensions ['python_setup_py']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver) by extension 'python_setup_py'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['ignore', 'ignore_ament_install']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'ignore'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'ignore_ament_install'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['colcon_pkg']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'colcon_pkg'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['colcon_meta']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'colcon_meta'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['ros']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'ros'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['cmake', 'python']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'cmake'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'python'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extensions ['python_setup_py']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc) by extension 'python_setup_py'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['ignore', 'ignore_ament_install']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'ignore'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'ignore_ament_install'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['colcon_pkg']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'colcon_pkg'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['colcon_meta']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'colcon_meta'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['ros']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'ros'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['cmake', 'python']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'cmake'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'python'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extensions ['python_setup_py']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy) by extension 'python_setup_py'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['ignore', 'ignore_ament_install']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ignore'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ignore_ament_install'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['colcon_pkg']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'colcon_pkg'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['colcon_meta']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'colcon_meta'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['ros']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'ros'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['cmake', 'python']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'cmake'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'python'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extensions ['python_setup_py']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(STM/traffic_light/Drivers/STM32F4xx_HAL_Driver/Src) by extension 'python_setup_py'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extensions ['ignore', 'ignore_ament_install']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extension 'ignore'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extension 'ignore_ament_install'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extensions ['colcon_pkg']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extension 'colcon_pkg'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extensions ['colcon_meta']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extension 'colcon_meta'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extensions ['ros']
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extension 'ros'
+[0.361s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extensions ['cmake', 'python']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extension 'cmake'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extension 'python'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extensions ['python_setup_py']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(iot_server) by extension 'python_setup_py'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extensions ['ignore', 'ignore_ament_install']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'ignore'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'ignore_ament_install'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extensions ['colcon_pkg']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'colcon_pkg'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extensions ['colcon_meta']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'colcon_meta'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extensions ['ros']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'ros'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extensions ['cmake', 'python']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'cmake'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'python'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extensions ['python_setup_py']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(qt) by extension 'python_setup_py'
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extensions ['ignore', 'ignore_ament_install']
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extension 'ignore'
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extension 'ignore_ament_install'
+[0.363s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extensions ['colcon_pkg']
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extension 'colcon_pkg'
+[0.364s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extensions ['colcon_meta']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extension 'colcon_meta'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extensions ['ros']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extension 'ros'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extensions ['cmake', 'python']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extension 'cmake'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extension 'python'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extensions ['python_setup_py']
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light) by extension 'python_setup_py'
+[0.365s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extensions ['ignore', 'ignore_ament_install']
+[0.366s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extension 'ignore'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extension 'ignore_ament_install'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extensions ['colcon_pkg']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extension 'colcon_pkg'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extensions ['colcon_meta']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extension 'colcon_meta'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extensions ['ros']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extension 'ros'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extensions ['cmake', 'python']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extension 'cmake'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extension 'python'
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extensions ['python_setup_py']
+[0.368s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build) by extension 'python_setup_py'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extensions ['ignore', 'ignore_ament_install']
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extension 'ignore'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extension 'ignore_ament_install'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extensions ['colcon_pkg']
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extension 'colcon_pkg'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extensions ['colcon_meta']
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extension 'colcon_meta'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extensions ['ros']
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extension 'ros'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extensions ['cmake', 'python']
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extension 'cmake'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extension 'python'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extensions ['python_setup_py']
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/build/Desktop_Qt_6_8_3-Debug) by extension 'python_setup_py'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extensions ['ignore', 'ignore_ament_install']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extension 'ignore'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extension 'ignore_ament_install'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extensions ['colcon_pkg']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extension 'colcon_pkg'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extensions ['colcon_meta']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extension 'colcon_meta'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extensions ['ros']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extension 'ros'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extensions ['cmake', 'python']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extension 'cmake'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extension 'python'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extensions ['python_setup_py']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(qt/traffic_light/images) by extension 'python_setup_py'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_client) by extensions ['ignore', 'ignore_ament_install']
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_client) by extension 'ignore'
+[0.373s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_client) by extension 'ignore_ament_install'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_client) by extensions ['colcon_pkg']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_client) by extension 'colcon_pkg'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_client) by extensions ['colcon_meta']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_client) by extension 'colcon_meta'
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_client) by extensions ['ros']
+[0.374s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_client) by extension 'ros'
+[0.377s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_client' with type 'ros.ament_python' and name 'ros2_client'
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extensions ['ignore', 'ignore_ament_install']
+[0.378s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extension 'ignore'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extension 'ignore_ament_install'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extensions ['colcon_pkg']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extension 'colcon_pkg'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extensions ['colcon_meta']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extension 'colcon_meta'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extensions ['ros']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extension 'ros'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extensions ['cmake', 'python']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extension 'cmake'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extension 'python'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extensions ['python_setup_py']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client) by extension 'python_setup_py'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extensions ['ignore', 'ignore_ament_install']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extension 'ignore'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extension 'ignore_ament_install'
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extensions ['colcon_pkg']
+[0.379s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extension 'colcon_pkg'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extensions ['colcon_meta']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extension 'colcon_meta'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extensions ['ros']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extension 'ros'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extensions ['cmake', 'python']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extension 'cmake'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extension 'python'
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extensions ['python_setup_py']
+[0.380s] Level 1:colcon.colcon_core.package_identification:_identify(sql_client/temp) by extension 'python_setup_py'
+[0.380s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.380s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.380s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.380s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.380s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.401s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.401s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.403s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install
+[0.404s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/humble
+[0.414s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.458s] Level 5:colcon.colcon_core.verb:set package 'ros2_client' build argument 'cmake_args' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'ros2_client' build argument 'cmake_target' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'ros2_client' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'ros2_client' build argument 'cmake_clean_cache' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'ros2_client' build argument 'cmake_clean_first' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'ros2_client' build argument 'cmake_force_configure' from command line to 'False'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'ros2_client' build argument 'ament_cmake_args' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'ros2_client' build argument 'catkin_cmake_args' from command line to 'None'
+[0.460s] Level 5:colcon.colcon_core.verb:set package 'ros2_client' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.460s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_client' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client', 'merge_install': False, 'path': '/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client', 'symlink_install': False, 'test_result_base': None}
+[0.460s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.461s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.462s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client' with build type 'ament_python'
+[0.462s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_client', 'ament_prefix_path')
+[0.464s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.465s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/ros2_client/hook/ament_prefix_path.ps1'
+[0.466s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/ros2_client/hook/ament_prefix_path.dsv'
+[0.467s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/ros2_client/hook/ament_prefix_path.sh'
+[0.469s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.469s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.768s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client'
+[0.769s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.769s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.298s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client': PYTHONPATH=/home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ros2_client build --build-base /home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/build install --record /home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/install.log --single-version-externally-managed install_data
+[1.604s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client' returned '0': PYTHONPATH=/home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ros2_client build --build-base /home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/build install --record /home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/install.log --single-version-externally-managed install_data
+[1.608s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client' for CMake module files
+[1.608s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client' for CMake config files
+[1.609s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/lib'
+[1.609s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/bin'
+[1.609s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/lib/pkgconfig/ros2_client.pc'
+[1.610s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/lib/python3.10/site-packages'
+[1.610s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_client', 'pythonpath')
+[1.611s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/ros2_client/hook/pythonpath.ps1'
+[1.611s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/ros2_client/hook/pythonpath.dsv'
+[1.612s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/ros2_client/hook/pythonpath.sh'
+[1.613s] Level 1:colcon.colcon_core.environment:checking '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/bin'
+[1.613s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_client)
+[1.614s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/ros2_client/package.ps1'
+[1.615s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/ros2_client/package.dsv'
+[1.616s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/ros2_client/package.sh'
+[1.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/ros2_client/package.bash'
+[1.618s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/ros2_client/package.zsh'
+[1.621s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/share/colcon-core/packages/ros2_client)
+[1.622s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.623s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.623s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.623s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.632s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.632s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.632s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.656s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.657s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/local_setup.ps1'
+[1.659s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/_local_setup_util_ps1.py'
+[1.661s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/setup.ps1'
+[1.662s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/local_setup.sh'
+[1.664s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/_local_setup_util_sh.py'
+[1.664s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/setup.sh'
+[1.665s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/local_setup.bash'
+[1.666s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/setup.bash'
+[1.667s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/local_setup.zsh'
+[1.667s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/setup.zsh'

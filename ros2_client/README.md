@@ -3,6 +3,18 @@
 이 패키지는 IoT TCP 서버에서 수신한 신호등 색상 메시지를 ROS 2 토픽으로 전달하고,
 동시에 로봇의 `cmd_vel`을 제어합니다.
 
+## 기능 정리
+
+- IoT TCP 서버에 자동 연결해 `[ID]` 형태의 신호 메시지를 수신합니다.
+- 수신한 색상(RED, GREEN, YELLOW)을 `std_msgs/String` 형태로 `/traffic_light/color` 토픽에 퍼블리시합니다.
+- 같은 색상에 맞춰 `geometry_msgs/Twist`를 `/cmd_vel`로 발행해 ROS 이동 속도를 즉시 제어합니다.
+  - RED → 정지(0,0)
+  - GREEN → 직진 기본 속도
+  - YELLOW → 감속 속도
+- Launch 파라미터로 서버 IP/포트, 토픽 이름, 색상별 속도를 유연하게 설정할 수 있습니다.
+- 연결이 끊어지면 지정한 주기(`reconnect_delay_sec`)로 자동 재접속을 시도합니다.
+- 수신 로그와 발행된 속도 정보는 노드 로그(INFO)로 확인할 수 있습니다.
+
 ## 빌드
 
 ```bash
@@ -69,13 +81,3 @@ ros2 launch ros2_client traffic_light_client.launch.py
     ```c
     ros2 topic echo /cmd_vel
     ```
-
-## 기능 정리
-
-- IoT TCP 서버에 자동 연결해 `[ID]` 형태의 신호 메시지를 수신합니다.
-- 수신한 색상(RED, GREEN, YELLOW)을 `std_msgs/String` 형태로 `/traffic_light/color` 토픽에 퍼블리시합니다.
-- 같은 색상에 맞춰 `geometry_msgs/Twist`를 `/cmd_vel`로 발행해 ROS 이동 속도를 즉시 제어합니다.
-  - RED → 정지(0,0)
-  - GREEN → 직진 기본 속도
-  - YELLOW → 감속 속도
-- Launch 파라미터로 서버 IP/포트, 토픽 이름, 색상별 속도를 유연하게 설정할 수 있습니다.

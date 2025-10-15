@@ -1,0 +1,21 @@
+[0.852s] Invoking command in '/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client': PYTHONPATH=/home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ros2_client build --build-base /home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/build install --record /home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/install.log --single-version-externally-managed install_data
+[1.143s] running egg_info
+[1.144s] writing ../build/ros2_client/ros2_client.egg-info/PKG-INFO
+[1.145s] writing dependency_links to ../build/ros2_client/ros2_client.egg-info/dependency_links.txt
+[1.145s] writing entry points to ../build/ros2_client/ros2_client.egg-info/entry_points.txt
+[1.145s] writing requirements to ../build/ros2_client/ros2_client.egg-info/requires.txt
+[1.145s] writing top-level names to ../build/ros2_client/ros2_client.egg-info/top_level.txt
+[1.146s] reading manifest file '../build/ros2_client/ros2_client.egg-info/SOURCES.txt'
+[1.148s] writing manifest file '../build/ros2_client/ros2_client.egg-info/SOURCES.txt'
+[1.148s] running build
+[1.148s] running build_py
+[1.149s] running install
+[1.149s] running install_lib
+[1.151s] running install_data
+[1.151s] running install_egg_info
+[1.153s] removing '/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/lib/python3.10/site-packages/ros2_client-0.1.0-py3.10.egg-info' (and everything under it)
+[1.153s] Copying ../build/ros2_client/ros2_client.egg-info to /home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/lib/python3.10/site-packages/ros2_client-0.1.0-py3.10.egg-info
+[1.155s] running install_scripts
+[1.182s] Installing traffic_light_client script to /home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/lib/ros2_client
+[1.183s] writing list of installed files to '/home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/install.log'
+[1.202s] Invoked command in '/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client' returned '0': PYTHONPATH=/home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/Workspace/final_project/autonomous-driving-project/install/ros2_client/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/ros2_client build --build-base /home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/build install --record /home/ubuntu/Workspace/final_project/autonomous-driving-project/build/ros2_client/install.log --single-version-externally-managed install_data
