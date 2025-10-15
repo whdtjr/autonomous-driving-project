@@ -1,0 +1,2 @@
+../Core/Src/microros_app.c:16:17:make_client_key_from_uid	2
+../Core/Src/microros_app.c:25:6:microros_app_run	12
