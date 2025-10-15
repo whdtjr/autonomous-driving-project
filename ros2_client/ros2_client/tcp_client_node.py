@@ -15,7 +15,8 @@ class TrafficLightTcpClient(Node):
     def __init__(self) -> None:
         super().__init__("traffic_light_tcp_client")
 
-        self.declare_parameter("server_ip", "127.0.0.1")
+        #self.declare_parameter("server_ip", "127.0.0.1")
+        self.declare_parameter("server_ip", "10.10.16.80")
         self.declare_parameter("server_port", 9000)
         self.declare_parameter("client_id", "ROS2")
         self.declare_parameter("password", "PASSWD")
