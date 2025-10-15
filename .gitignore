@@ -2,3 +2,16 @@
 /build/
 /install/
 /log/
+
+# STM32CubeIDE 빌드 산출물만 무시
+STM/**/Debug/
+STM/**/Release/
+.settings/
+*.o
+*.d
+*.su
+*.elf
+*.map
+*.list
+*.launch
+temp/
