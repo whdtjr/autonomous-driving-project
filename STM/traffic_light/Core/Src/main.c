@@ -245,9 +245,16 @@ int main(void)
 
 		  // 신호등 상태, 시간 SQL(db)에 보내기
 		  char sendBuf[MAX_UART_COMMAND_LEN]={0};
+
 		  sprintf(sendBuf,"[%s]TIME@%d@%s@Z1\n","JAB_SQL", time_led, led_names[state_led]);
 		  esp_send_data(sendBuf);
-		  printf("Debug send : %s\r\n",sendBuf);
+		  printf("Debug send 1: %s\r\n",sendBuf);
+
+		  sprintf(sendBuf,"[%s]%s\n","ROS2", led_names[state_led]);
+		  esp_send_data(sendBuf);
+		  printf("Debug send 2: %s\r\n",sendBuf);
+
+
 
 		  cp_main_ok = 1;
 	  }
