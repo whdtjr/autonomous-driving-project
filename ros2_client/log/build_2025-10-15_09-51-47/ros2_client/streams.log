@@ -1,0 +1,39 @@
+[1.158s] Invoking command in '/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client': PYTHONPATH=/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/ros2_client build --build-base /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/build install --record /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/install.log --single-version-externally-managed install_data
+[1.479s] running egg_info
+[1.479s] creating build/ros2_client/ros2_client.egg-info
+[1.480s] writing build/ros2_client/ros2_client.egg-info/PKG-INFO
+[1.480s] writing dependency_links to build/ros2_client/ros2_client.egg-info/dependency_links.txt
+[1.480s] writing entry points to build/ros2_client/ros2_client.egg-info/entry_points.txt
+[1.480s] writing requirements to build/ros2_client/ros2_client.egg-info/requires.txt
+[1.480s] writing top-level names to build/ros2_client/ros2_client.egg-info/top_level.txt
+[1.481s] writing manifest file 'build/ros2_client/ros2_client.egg-info/SOURCES.txt'
+[1.481s] reading manifest file 'build/ros2_client/ros2_client.egg-info/SOURCES.txt'
+[1.483s] writing manifest file 'build/ros2_client/ros2_client.egg-info/SOURCES.txt'
+[1.483s] running build
+[1.483s] running build_py
+[1.483s] creating /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/build
+[1.484s] creating /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/build/lib
+[1.484s] creating /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/build/lib/ros2_client
+[1.484s] copying ros2_client/__init__.py -> /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/build/lib/ros2_client
+[1.484s] copying ros2_client/tcp_client_node.py -> /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/build/lib/ros2_client
+[1.485s] running install
+[1.485s] running install_lib
+[1.486s] creating /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/lib/python3.10/site-packages/ros2_client
+[1.486s] copying /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/build/lib/ros2_client/__init__.py -> /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/lib/python3.10/site-packages/ros2_client
+[1.486s] copying /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/build/lib/ros2_client/tcp_client_node.py -> /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/lib/python3.10/site-packages/ros2_client
+[1.486s] byte-compiling /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/lib/python3.10/site-packages/ros2_client/__init__.py to __init__.cpython-310.pyc
+[1.487s] byte-compiling /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/lib/python3.10/site-packages/ros2_client/tcp_client_node.py to tcp_client_node.cpython-310.pyc
+[1.487s] running install_data
+[1.487s] creating /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/share/ament_index
+[1.487s] creating /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/share/ament_index/resource_index
+[1.488s] creating /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/share/ament_index/resource_index/packages
+[1.488s] copying resource/ros2_client -> /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/share/ament_index/resource_index/packages
+[1.488s] copying package.xml -> /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/share/ros2_client
+[1.488s] creating /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/share/ros2_client/launch
+[1.488s] copying launch/traffic_light_client.launch.py -> /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/share/ros2_client/launch
+[1.488s] running install_egg_info
+[1.489s] Copying build/ros2_client/ros2_client.egg-info to /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/lib/python3.10/site-packages/ros2_client-0.1.0-py3.10.egg-info
+[1.490s] running install_scripts
+[1.510s] Installing traffic_light_client script to /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/lib/ros2_client
+[1.510s] writing list of installed files to '/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/install.log'
+[1.529s] Invoked command in '/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client' returned '0': PYTHONPATH=/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/install/ros2_client/lib/python3.10/site-packages: /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/ros2_client build --build-base /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/build install --record /home/ubuntu/Workspace/final_project/autonomous-driving-project/ros2_client/build/ros2_client/install.log --single-version-externally-managed install_data

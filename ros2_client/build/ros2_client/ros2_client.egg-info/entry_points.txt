@@ -1,0 +1,3 @@
+[console_scripts]
+traffic_light_client = ros2_client.tcp_client_node:main
+
