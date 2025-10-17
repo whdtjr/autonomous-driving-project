@@ -9,7 +9,7 @@ git clone -b Woojin5020 --single-branch https://github.com/whdtjr/autonomous-dri
 
 ---
 
-# STM32에 연결된 센서값을 Rock칩에 캔 통신으로 보내기 예제
+# STM32에 연결된 센서값을 Rockchip으로 CAN 통신으로 보내기 예제
 
 ### **실습환경**
 - 개발보드1 : Stm32F446RE (Can 컨트롤러 포함 보드)
@@ -53,10 +53,10 @@ git clone -b Woojin5020 --single-branch https://github.com/whdtjr/autonomous-dri
 
 ### can 통신 추가 하는법
 ```
-/* Rock칩 기준 장치 SOC 정보가 담기 DTB 파일 경로*/
+# Rockchip 기준 SoC 장치 정보가 담긴 DTB 파일 경로
 $ cd /lib/firmware/5.10.0-1012-rockchip/device-tree/rockchip
 
-/* Rock칩 기준 장치 특정 주변장치의 기능을 사용할때는 이 경로에서 수정 -> 컴파일 -> extlinux.conf에 넣는 과정을 진행하면됨. */
+# Rockchip 기준 특정 주변장치 기능 활성화 시 overlay 디렉터리 내 수정 -> 컴파일 -> extlinux.conf에 추가
 $ cd /lib/firmware/5.10.0-1012-rockchip/device-tree/rockchip/overlay
 
 
@@ -65,19 +65,23 @@ sudo vi /boot/extlinux/extlinux.conf
 FDTOVERLAYS /lib/firmware/5.10.0-1012-rockchip/device-tree/rockchip/overlay/rk3588-can1-m1.dtbo
 
 
-/* can 장치 위치 네트워크 드라이버라 여기에 잡힘 */
+# CAN 장치는 네트워크 인터페이스로 인식됨
 rock@rock-desktop:/sys/class/net$ ls
 can0  enP4p65s0  lo  wlan0  wlP2p33s0
 ```
 
-### can 통신 코드 실행 방법
+### CAN 통신 코드 실행 방법
 ```
 ./RockChip_5B/recv_can_tof_mpu # 실행
 
 ```
 
 
-- Uart 디버깅 사진
-![Debug](image/Debug.png)
+- 디버깅 사진(RockChip)
+---  
+![Debug_1](image/can_debug.png)
 
+- 디버깅 사진(STM32)
+--- 
+![Debug_1](image/stm32_debug.png)
 ---
