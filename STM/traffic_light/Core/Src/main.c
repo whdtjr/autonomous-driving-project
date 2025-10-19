@@ -44,6 +44,7 @@
 #endif /* __GNUC__ */
 #define ARR_CNT 5
 #define CMD_SIZE 50
+#define DB_CLIENT_ID "V2I_DB"
 
 /* USER CODE END PD */
 
@@ -246,7 +247,7 @@ int main(void)
 		  // 신호등 상태, 시간 SQL(db)에 보내기
 		  char sendBuf[MAX_UART_COMMAND_LEN]={0};
 
-		  sprintf(sendBuf,"[%s]TIME@%d@%s@Z1\n","JAB_SQL", time_led, led_names[state_led]);
+		  sprintf(sendBuf,"[%s]TIME@%d@%s@Z1\n",DB_CLIENT_ID, time_led, led_names[state_led]);
 		  esp_send_data(sendBuf);
 		  printf("Debug send 1: %s\r\n",sendBuf);
 
@@ -644,9 +645,9 @@ void esp_event(char * recvBuf)
   	{
   		printf(">>>>>state test\r\n");
 
-  	  	// [JAB_SQL]STATE@RED@Z1
+  	  	// [V2I_DB]STATE@RED@Z1
   	  	printf("state_led = %s\r\n", led_names[state_led]);
-  	  	sprintf(sendBuf,"[%s]STATE@%s@Z1\n","JAB_SQL", led_names[state_led]);
+  	  	sprintf(sendBuf,"[%s]STATE@%s@Z1\n",DB_CLIENT_ID, led_names[state_led]);
   	}
   }
 
@@ -656,9 +657,9 @@ void esp_event(char * recvBuf)
   	{
   		printf(">>>>time test\r\n");
 
-  	  	// [JAB_SQL]TIME@20@RED@Z1
+  	  	// [V2I_DB]TIME@20@RED@Z1
   	  	printf("time_led = %d\r\n", time_led);
-  	  	sprintf(sendBuf,"[%s]TIME@%d@%s@Z1\n","JAB_SQL", time_led, led_names[state_led]);
+  	  	sprintf(sendBuf,"[%s]TIME@%d@%s@Z1\n",DB_CLIENT_ID, time_led, led_names[state_led]);
   	}
   }
 

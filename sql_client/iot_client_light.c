@@ -169,7 +169,7 @@ void* recv_msg(void* arg)
 			pToken = strtok(NULL, "[:@]");
 
 		}
-//--------------state_light UPDATE		
+//--------------state_light UPDATE	
 		// [JAB_SQL]STATE@RED@Z1
 		if(!strcmp(pArray[1],"STATE") && (i == 4)){
 			sprintf(sql_cmd, "update vehicle_zone set state_led='%s' where zone_id='%s'", pArray[2], pArray[3]);
@@ -190,7 +190,7 @@ void* recv_msg(void* arg)
 				printf("MEMBER : updated %lu rows\n", (unsigned long)mysql_affected_rows(conn));
 
 			// QT한테 전송	
-			sprintf(socket_cmd, "[%s]%s@%s@%s@%s\n","JAB_QT",pArray[1],pArray[2],pArray[3],pArray[4]);
+			sprintf(socket_cmd, "[%s]%s@%s@%s@%s\n","V2I_UI",pArray[1],pArray[2],pArray[3],pArray[4]);
 			write(*sock, socket_cmd, strlen(socket_cmd));
 		}	
 //------------------------------------		

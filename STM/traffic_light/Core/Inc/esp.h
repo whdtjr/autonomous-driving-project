@@ -13,7 +13,8 @@
 
 #define SSID "embB"
 #define PASS "embB1234"
-#define LOGID "JAB_STM"
+//#define LOGID "JAB_STM"
+#define LOGID "V2I_STM"
 #define PASSWD "PASSWD"
 //#define DST_IP "10.10.141.86"
 //#define DST_IP "192.168.0.99"
