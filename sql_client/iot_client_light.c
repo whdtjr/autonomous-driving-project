@@ -129,11 +129,6 @@ void* recv_msg(void* arg)
 
 	char name_msg[NAME_SIZE + BUF_SIZE + 1];
 	int str_len;
-
-	// int illu;
-	// double temp;
-	// double humi;
-
 	int time_led;
 	char state_led[10];
 
@@ -169,41 +164,55 @@ void* recv_msg(void* arg)
 			pToken = strtok(NULL, "[:@]");
 
 		}
-//--------------state_light UPDATE	
-		// [JAB_SQL]STATE@RED@Z1
-		if(!strcmp(pArray[1],"STATE") && (i == 4)){
-			sprintf(sql_cmd, "update vehicle_zone set state_led='%s' where zone_id='%s'", pArray[2], pArray[3]);
-			res = mysql_query(conn, sql_cmd);
-			if (!res)
-				printf("MEMBER : updated %lu rows\n", (unsigned long)mysql_affected_rows(conn));
-		}	
-//--------------time_light UPDATE		
-		// STM -> [JAB_SQL]TIME@20@RED@Z1
-		// SQL -> [JAB_QT]TIME@20@RED@Z1
+
+//--------------time_light UPDATE------------------		
+		// V2I_STM -> [V2I_DB]TIME@20@RED@Z1
+		// 수신 msg : [V2I_STM]TIME@20@RED@Z1
+		// V2I_DB -> [V2I_UI]TIME@20@RED@Z1
+		// V2I_DB -> [ROS2]RED
 		if(!strcmp(pArray[1],"TIME") && (i == 5)){
 			time_led = atoi(pArray[2]);
 
-			//sprintf(sql_cmd, "update vehicle_zone set time_led='%d' where state_led='%s' AND zone_id='%s'", time_led, pArray[3], pArray[4]);
+			// V2I_STM한테 받은 신호등 데이터를 DB Table에 업데이트
 			sprintf(sql_cmd, "update vehicle_zone set time_led='%d', state_led='%s' where zone_id='%s'", time_led, pArray[3], pArray[4]);
 			res = mysql_query(conn, sql_cmd);
 			if (!res)
 				printf("MEMBER : updated %lu rows\n", (unsigned long)mysql_affected_rows(conn));
 
-			// QT한테 전송	
+			// QT한테 전송: [V2I_UI]TIME@20@RED@Z1 
 			sprintf(socket_cmd, "[%s]%s@%s@%s@%s\n","V2I_UI",pArray[1],pArray[2],pArray[3],pArray[4]);
 			write(*sock, socket_cmd, strlen(socket_cmd));
+
+			// ROS2한테 전송: [ROS2]RED
+			sprintf(socket_cmd, "[%s]%s\n","ROS2",pArray[3]);
+			write(*sock, socket_cmd, strlen(socket_cmd));
+			
 		}	
-//------------------------------------		
+//---------------지자기 인식되면 table에 차량 추가--------------		
+		// ROS2 -> [V2I_DB]IN
+		// 수신 msg : [ROS2]IN
+		if(!strcmp(pArray[1], "IN") && (i == 2)){
+  			sprintf(sql_cmd, "insert into vehicle_zone(zone_id, vehicle_id) values(\"%s\",\"%s\")","Z1",pArray[0]);
+			// printf("[IN]sql_cmd : %s\n", sql_cmd);
+			res = mysql_query(conn, sql_cmd);
+			if (!res)
+				printf("MEMBER : inserted %lu rows\n", (unsigned long)mysql_affected_rows(conn));
+		}	
+//---------------지자기 인식 안되면 table에서 차량 삭제------------		
+		// ROS2 -> [V2I_DB]OUT
+		// 수신 msg : [ROS2]OUT
+		if(!strcmp(pArray[1], "OUT") && (i == 2)){
+  			sprintf(sql_cmd, "delete from vehicle_zone where vehicle_id='%s'", pArray[0]);
+			// printf("[OUT]sql_cmd : %s\n", sql_cmd);
+			res = mysql_query(conn, sql_cmd);
+			if (!res)
+				printf("MEMBER : deleted %lu rows\n", (unsigned long)mysql_affected_rows(conn));
+		}	
+//--------------------------------------------------------------
 		else 
 			continue;
-		res = mysql_query(conn, sql_cmd);
-		if (!res)
-			printf("inserted %lu rows\n", (unsigned long)mysql_affected_rows(conn));
-		else
-			fprintf(stderr, "ERROR: %s[%d]\n", mysql_error(conn), mysql_errno(conn));
 	}
 	mysql_close(conn);
-
 }
 
 void error_handling(char* msg)
