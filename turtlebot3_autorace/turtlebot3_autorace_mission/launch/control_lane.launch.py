@@ -22,17 +22,18 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     control_node = Node(
-            package='turtlebot3_autorace_mission',
-            executable='control_lane',
-            name='control_lane',
-            output='screen',
-            remappings=[
-                ('/control/lane', '/detect/lane'),
-                ('/control/lane_angle', '/detect/lane_angle'),
-                ('/control/lane_state', '/detect/lane_state'),
-                ('/control/cmd_vel', '/cmd_vel')
-            ]
-        )
+        package='turtlebot3_autorace_mission',
+        executable='control_lane',
+        name='control_lane',
+        output='screen',
+        remappings=[
+            ('/control/lane', '/detect/lane'),
+            ('/control/lane_angle', '/detect/lane_angle'),
+            ('/control/lane_state', '/detect/lane_state'),
+            ('/control/cmd_vel', '/cmd_vel'),
+        ],
+        parameters=[{'schoolzone_detection_topic': '/detections'}],
+    )
     return LaunchDescription([
         control_node
     ])

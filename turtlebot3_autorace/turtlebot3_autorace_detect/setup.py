@@ -46,7 +46,7 @@ setup(
                 turtlebot3_autorace_detect.detect_level_crossing_sign:main',
             'detect_parking_sign = turtlebot3_autorace_detect.detect_parking_sign:main',
             'detect_traffic_light = turtlebot3_autorace_detect.detect_traffic_light:main',
-            'detect_tunnel_sign = turtlebot3_autorace_detect.detect_tunnel_sign:main',
+            'detect_safezone_sign = turtlebot3_autorace_detect.detect_safezone_sign:main',
         ],
     },
 )
